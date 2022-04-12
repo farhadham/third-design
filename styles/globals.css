@@ -10,6 +10,10 @@ body {
   box-sizing: border-box;
   font-size: 14px !important;
 }
+html::-webkit-scrollbar {
+  width: 0;
+  opacity: 0;
+}
 
 a {
   color: inherit;

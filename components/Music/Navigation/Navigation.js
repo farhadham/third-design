@@ -12,19 +12,10 @@ function Navigation(props) {
     { id: 4, link: "PORTFOLIO" },
   ]);
 
-  const [index, setIndex] = useState(0);
-
-  const nextHandler = () => {
-    setIndex(++index);
-    if (index === 5) {
-      setIndex(0);
-    }
-  };
-
   return (
     <div className={classes.wrapper}>
       <motion.div
-        onClick={nextHandler}
+        onClick={props.onClick}
         className={classes.nextButton}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -43,7 +34,7 @@ function Navigation(props) {
               transition={{ duration: 0.3 }}
               exit={{ opacity: 0 }}
             >
-              <Li index={index} />
+              <Li index={props.index} />
             </motion.div>
           )}
         </AnimatePresence>
