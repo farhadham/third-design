@@ -1,5 +1,4 @@
 import classes from "./li.module.scss";
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 function Li(props) {
@@ -204,6 +203,9 @@ function Li(props) {
           animate="music"
           variants={variants}
           transition={{ duration: 0.3 }}
+          onClick={() => {
+            props.setIndex(3);
+          }}
         >
           MUSIC
         </motion.li>
@@ -212,6 +214,9 @@ function Li(props) {
           animate="contact"
           variants={variants}
           transition={{ duration: 0.3 }}
+          onClick={() => {
+            props.setIndex(4);
+          }}
         >
           CONTACT
         </motion.li>
@@ -220,6 +225,9 @@ function Li(props) {
           animate="home"
           variants={variants}
           transition={{ duration: 0.3 }}
+          onClick={() => {
+            props.setIndex(0);
+          }}
         >
           HOME
         </motion.li>
@@ -228,6 +236,9 @@ function Li(props) {
           animate="about"
           variants={variants}
           transition={{ duration: 0.3 }}
+          onClick={() => {
+            props.setIndex(1);
+          }}
         >
           ABOUT
         </motion.li>
@@ -236,6 +247,9 @@ function Li(props) {
           animate="portfolio"
           variants={variants}
           transition={{ duration: 0.3 }}
+          onClick={() => {
+            props.setIndex(2);
+          }}
         >
           PORTFOLIO
         </motion.li>

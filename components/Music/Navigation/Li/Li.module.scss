@@ -1,6 +1,6 @@
 .wrapper {
   ul {
-    color: white;
+    color: rgb(255, 255, 255);
     list-style: none;
     font-size: 2rem;
     letter-spacing: 0.2rem;
@@ -8,6 +8,7 @@
     text-align: center;
     li {
       margin: 25px 0;
+      cursor: pointer;
     }
   }
 }

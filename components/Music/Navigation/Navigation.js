@@ -4,14 +4,6 @@ import { useState } from "react";
 import Li from "./Li/Li";
 
 function Navigation(props) {
-  const [navItems, setNavItems] = useState([
-    { id: 0, link: "MUSIC" },
-    { id: 1, link: "CONTACT" },
-    { id: 2, link: "HOME" },
-    { id: 3, link: "ABOUT" },
-    { id: 4, link: "PORTFOLIO" },
-  ]);
-
   return (
     <div className={classes.wrapper}>
       <motion.div
@@ -34,7 +26,7 @@ function Navigation(props) {
               transition={{ duration: 0.3 }}
               exit={{ opacity: 0 }}
             >
-              <Li index={props.index} />
+              <Li index={props.index} setIndex={props.setIndex} />
             </motion.div>
           )}
         </AnimatePresence>

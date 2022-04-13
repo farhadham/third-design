@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import Navigation from "./Navigation/Navigation";
 import classes from "./Music.module.scss";
 import { useState } from "react";
+import Home from "./Home/Home";
+import About from "./About/About";
+import Portfolio from "./Portfolio/Portfolio";
 
 function Music(props) {
   const [index, setIndex] = useState(0);
@@ -19,10 +22,11 @@ function Music(props) {
         onClick={nextHandler}
         isEntered={props.isEntered}
         index={index}
+        setIndex={setIndex}
       />
-      <div className={classes.backgroundHome}></div>
-      <div className={classes.backgroundAbout}></div>
-      <div className={classes.backgroundContact}></div>
+      <Home index={index} />
+      <About index={index} />
+      <Portfolio index={index} />
     </div>
   );
 }
