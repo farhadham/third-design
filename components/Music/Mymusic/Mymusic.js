@@ -1,13 +1,12 @@
-import classes from "./Home.module.scss";
+import classes from "./Mymusic.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
-function Home(props) {
+function Mymusic(props) {
   const [onButton, setOnButton] = useState(false);
-
   return (
     <AnimatePresence>
-      {props.index === 0 && (
+      {props.index === 3 && (
         <motion.div
           className={classes.wrapper}
           initial={{ x: "100vw" }}
@@ -23,8 +22,33 @@ function Home(props) {
                 initial={{ opacity: 0, x: 70 }}
                 transition={{ duration: 0.3, delay: 0.4 }}
               >
-                <h2>MUSIC COMPOSER & AUDIO ENGINEER</h2>
-                <h1>MY NAME IS FARHAD FARAJI</h1>
+                <h2>MUSIC</h2>
+                <div className={classes.musicContainer}>
+                  <iframe
+                    width="100%"
+                    height="300"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1118680582&color=%23ba5669&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                  ></iframe>
+                  <iframe
+                    width="100%"
+                    height="300"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1074128704&color=%23ba5669&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                  ></iframe>
+                  <iframe
+                    width="100%"
+                    height="300"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1250032426&color=%23ba5669&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                  ></iframe>
+                </div>
                 <a
                   href="https://www.linkedin.com/in/farhadfaraji/"
                   target="_blank"
@@ -41,7 +65,7 @@ function Home(props) {
                   >
                     <motion.div
                       className={classes.back}
-                      animate={onButton ? { width: "200px" } : { width: "1px" }}
+                      animate={onButton ? { width: "300px" } : { width: "1px" }}
                       transition={{ duration: 0.3 }}
                     ></motion.div>
                     <motion.div
@@ -51,7 +75,7 @@ function Home(props) {
                       }
                       transition={{ duration: 0.3 }}
                     >
-                      LINKEDIN
+                      SOUNDCLOUD
                     </motion.div>
                   </div>
                 </a>
@@ -64,4 +88,4 @@ function Home(props) {
   );
 }
 
-export default Home;
+export default Mymusic;

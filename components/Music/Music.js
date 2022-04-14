@@ -5,6 +5,7 @@ import { useState } from "react";
 import Home from "./Home/Home";
 import About from "./About/About";
 import Portfolio from "./Portfolio/Portfolio";
+import Mymusic from "./Mymusic/Mymusic";
 
 function Music(props) {
   const [index, setIndex] = useState(0);
@@ -24,9 +25,12 @@ function Music(props) {
         index={index}
         setIndex={setIndex}
       />
-      <Home index={index} />
-      <About index={index} />
-      <Portfolio index={index} />
+      <div className={classes.wrapper2}>
+        <Home index={index} />
+        <About index={index} />
+        <Portfolio index={index} />
+        <Mymusic index={index} />
+      </div>
     </div>
   );
 }
