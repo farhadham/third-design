@@ -7,7 +7,7 @@ function Home(props) {
 
   return (
     <AnimatePresence>
-      {props.index === 0 && (
+      {(props.index === 0 || props.mobile) && (
         <motion.div
           className={classes.wrapper}
           initial={{ x: "100vw" }}

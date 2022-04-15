@@ -1,5 +1,8 @@
 .wrapper {
   .wrapper2 {
     display: block;
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
   }
 }

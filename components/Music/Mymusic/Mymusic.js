@@ -6,7 +6,7 @@ function Mymusic(props) {
   const [onButton, setOnButton] = useState(false);
   return (
     <AnimatePresence>
-      {props.index === 3 && (
+      {(props.index === 3 || props.mobile) && (
         <motion.div
           className={classes.wrapper}
           initial={{ x: "100vw" }}
@@ -26,31 +26,31 @@ function Mymusic(props) {
                 <div className={classes.musicContainer}>
                   <iframe
                     width="100%"
-                    height="300"
+                    height="100"
                     scrolling="no"
-                    frameborder="no"
+                    frameBorder="no"
                     allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1118680582&color=%23ba5669&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
                   ></iframe>
                   <iframe
                     width="100%"
-                    height="300"
+                    height="100"
                     scrolling="no"
-                    frameborder="no"
+                    frameBorder="no"
                     allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1074128704&color=%23ba5669&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
                   ></iframe>
                   <iframe
                     width="100%"
-                    height="300"
+                    height="100"
                     scrolling="no"
-                    frameborder="no"
+                    frameBorder="no"
                     allow="autoplay"
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1250032426&color=%23ba5669&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
                   ></iframe>
                 </div>
                 <a
-                  href="https://www.linkedin.com/in/farhadfaraji/"
+                  href="https://soundcloud.com/farhadham"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -71,7 +71,7 @@ function Mymusic(props) {
                     <motion.div
                       className={classes.front}
                       animate={
-                        onButton ? { color: "black" } : { color: "white" }
+                        onButton ? { color: "#ffffff" } : { color: "#080403" }
                       }
                       transition={{ duration: 0.3 }}
                     >

@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navigation from "./Navigation/Navigation";
 import classes from "./Music.module.scss";
-import { useState } from "react";
 import Home from "./Home/Home";
 import About from "./About/About";
 import Portfolio from "./Portfolio/Portfolio";
 import Mymusic from "./Mymusic/Mymusic";
+import Contact from "./Contact/Contact";
 
 function Music(props) {
   const [index, setIndex] = useState(0);
+  const [mobile, setMobile] = useState(false);
 
   const nextHandler = () => {
     setIndex(++index);
@@ -16,6 +17,13 @@ function Music(props) {
       setIndex(0);
     }
   };
+  useEffect(() => {
+    if (process.browser) {
+      if (window.innerWidth <= 992) {
+        setMobile(true);
+      }
+    }
+  });
 
   return (
     <div className={classes.wrapper}>
@@ -26,10 +34,11 @@ function Music(props) {
         setIndex={setIndex}
       />
       <div className={classes.wrapper2}>
-        <Home index={index} />
-        <About index={index} />
-        <Portfolio index={index} />
-        <Mymusic index={index} />
+        <Home index={index} mobile={mobile} />
+        <About index={index} mobile={mobile} />
+        <Portfolio index={index} mobile={mobile} />
+        <Mymusic index={index} mobile={mobile} />
+        <Contact index={index} mobile={mobile} />
       </div>
     </div>
   );

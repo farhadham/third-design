@@ -1,0 +1,168 @@
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  @media screen and (max-width: 992px) {
+    position: static;
+  }
+
+  .background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../../../public/images/background/contact.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .textWrapper {
+      text-align: right;
+      // background-color: rgba(0, 0, 0, 0.2);
+      width: 70%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        gap: 80px;
+        width: 85%;
+        right: 5vw;
+        position: absolute;
+        color: #ffffff;
+
+        .data {
+          h4 {
+            font-weight: 300;
+            line-height: 1.55;
+            font-size: 1.357rem;
+            font-family: "Lato", sans-serif;
+            letter-spacing: 3px;
+          }
+
+          p {
+            font-weight: 300;
+            line-height: 1.55;
+            font-size: 1.357rem;
+            font-family: "Lato", sans-serif;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+          }
+        }
+
+        h2 {
+          font-size: 4.857rem;
+          line-height: 1.08;
+          letter-spacing: 0.4rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+.formWrapper {
+  width: 90%;
+
+  form {
+    line-height: 1rem;
+    font-weight: 300;
+    font-family: "doris";
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: flex-end;
+    font-size: 5rem;
+
+    .nameEmail {
+      font-family: "Dosis", -apple-system, BlinkMacSystemFont, Segoe UI,
+        Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+        Helvetica Neue, sans-serif;
+
+      height: 40px;
+      width: 100%;
+      display: flex;
+      gap: 40px;
+      .name {
+        font-family: inherit;
+        border: none;
+        border-bottom: solid 1px white;
+        background: none;
+        font-size: 1.357rem;
+        width: 100%;
+        color: white;
+        font-weight: 300;
+      }
+      .email {
+        font-family: inherit;
+        border: none;
+        border-bottom: solid 1px white;
+        background: none;
+        font-size: 1.357rem;
+        width: 100%;
+        color: white;
+        font-weight: 300;
+      }
+    }
+
+    textarea {
+      font-family: "Dosis", -apple-system, BlinkMacSystemFont, Segoe UI,
+        Montserrat, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+        Helvetica Neue, sans-serif;
+      border: none;
+      border-bottom: solid 1px white;
+      background: none;
+      font-size: 1.357rem;
+      height: 40px;
+      width: 100%;
+      color: white;
+      font-weight: 300;
+      overflow: hidden;
+    }
+
+    .name:focus,
+    .email:focus,
+    textarea:focus {
+      outline: none;
+      border-bottom: solid 2px white;
+    }
+
+    .button {
+      background: none;
+      font-family: "dosis", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 40px;
+      font-size: 1rem;
+      letter-spacing: 0.2rem;
+      font-weight: 500;
+      border-radius: 200px;
+      border: solid 2px #ffffff;
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+
+      .back {
+        background-color: #ffffff;
+        width: 1px;
+        position: absolute;
+        height: 40px;
+        left: -10px;
+        z-index: 39;
+        border-radius: 50px;
+      }
+
+      .front {
+        text-align: center;
+        z-index: 40;
+      }
+    }
+  }
+}

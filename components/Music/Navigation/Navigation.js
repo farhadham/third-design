@@ -4,6 +4,8 @@ import { useState } from "react";
 import Li from "./Li/Li";
 
 function Navigation(props) {
+  const [isWindows, setIsWindows] = useState(true);
+
   return (
     <div className={classes.wrapper}>
       <motion.div
@@ -15,6 +17,7 @@ function Navigation(props) {
       >
         NEXT
       </motion.div>
+
       <motion.div className={classes.listWrapper}>
         <AnimatePresence>
           {props.isEntered && (
@@ -24,7 +27,7 @@ function Navigation(props) {
               initial={{ opacity: 0, width: "0%" }}
               animate={{ opacity: 1, width: "100%" }}
               transition={{ duration: 0.3 }}
-              exit={{ opacity: 0 }}
+              exit={{ opacity: 0, width: "0%" }}
             >
               <Li index={props.index} setIndex={props.setIndex} />
             </motion.div>

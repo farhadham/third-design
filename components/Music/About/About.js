@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 function About(props) {
   return (
     <AnimatePresence>
-      {props.index === 1 && (
+      {(props.index === 1 || props.mobile) && (
         <motion.div
           className={classes.wrapper}
           initial={{ x: "100vw" }}
